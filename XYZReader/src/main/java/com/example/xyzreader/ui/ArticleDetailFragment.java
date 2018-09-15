@@ -147,9 +147,11 @@ public class ArticleDetailFragment extends Fragment implements
         mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int bookId = mCursor.getInt(ArticleLoader.Query._ID);
+                String bookTitle = mCursor.getString(ArticleLoader.Query.TITLE);
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
                         .setType("text/plain")
-                        .setText("Some sample text")
+                        .setText(String.format(getString(R.string.shared_message_format), bookTitle, bookId))
                         .getIntent(), getString(R.string.action_share)));
             }
         });

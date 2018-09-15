@@ -8,5 +8,6 @@
     <string name="action_share">Share</string>
 
     <string name="up">Up</string>
+    <string name="shared_message_format">%1$s: http://www.gutenberg.org/files/%2$d/%2$d.txt</string>
 
 </resources>
