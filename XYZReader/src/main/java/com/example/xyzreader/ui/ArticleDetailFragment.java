@@ -212,7 +212,7 @@ public class ArticleDetailFragment extends Fragment implements
         TextView bodyView = mRootView.findViewById(R.id.article_body);
 
 
-        bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Roboto-Light.ttf"));
+        bodyView.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
 
         if (mCursor != null) {
             mRootView.setAlpha(0);
